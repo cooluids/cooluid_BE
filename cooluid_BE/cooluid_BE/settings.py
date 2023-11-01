@@ -21,7 +21,7 @@ def get_sercret(value, secrets = secrets):
     
 SECRET_KEY = get_sercret("SECRET_KEY")
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -60,13 +60,15 @@ MIDDLEWARE = [
     
 ]
 
-CORS_ALLOW_ALL_ORIGINS = False
-CORS_ALLOW_CREDENTIALS = True  
+ALLOWED_HOSTS = ['*']
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000',
-    'http://localhost:8000',
-)
+# CORS_ORIGIN_WHITELIST = (
+#     'http://localhost:3000',
+#     'http://localhost:8000',
+# )
 
 ROOT_URLCONF = 'cooluid_BE.urls'
 
