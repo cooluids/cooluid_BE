@@ -1,4 +1,0 @@
-{
-    "FROM_EMAIL" : "verify@cooluid.com",
-    "SCOPES" : "https://www.googleapis.com/auth/gmail.send"
-}
